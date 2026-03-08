@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" rx="32" fill="#0a0a1a"/>
+  <circle cx="96" cy="80" r="36" fill="#7c5cfc" opacity="0.3"/>
+  <text x="96" y="105" text-anchor="middle" font-size="72" fill="#7c5cfc">🌙</text>
+  <text x="96" y="160" text-anchor="middle" font-size="18" fill="#e8e8f0" font-family="sans-serif" font-weight="bold">梦境记录仪</text>
+</svg>
