@@ -55,6 +55,24 @@ const useAuthStore = create((set, get) => ({
     return data
   },
 
+  // 使用已有密钥登录
+  loginWithKey: async (apiKey) => {
+    storage.setApiKey(apiKey)
+    try {
+      const { data } = await authApi.verify()
+      if (!data.valid) {
+        storage.clearApiKey()
+        throw new Error('密钥无效或已过期')
+      }
+      const { data: profile } = await authApi.getProfile()
+      set({ apiKey, isAuthenticated: true, profile })
+    } catch (err) {
+      storage.clearApiKey()
+      set({ apiKey: '', isAuthenticated: false, profile: null })
+      throw err
+    }
+  },
+
   // 登出
   logout: () => {
     storage.clearApiKey()

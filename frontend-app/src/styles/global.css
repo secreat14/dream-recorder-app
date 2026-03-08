@@ -1007,3 +1007,96 @@ select {
   background: rgba(124, 92, 252, 0.15);
   color: var(--accent);
 }
+
+/* ===== 注册/登录模式切换 ===== */
+.auth-tabs {
+  display: flex;
+  gap: 0;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+  border: none;
+  min-height: 40px;
+}
+
+.auth-tab.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.auth-tab:not(.active):hover {
+  color: var(--text-primary);
+}
+
+/* ===== 密钥保存 Modal ===== */
+.key-save-modal {
+  text-align: center;
+}
+
+.key-save-warning {
+  font-size: 14px;
+  color: var(--warning);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.api-key-box {
+  padding: 14px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  word-break: break-all;
+  user-select: all;
+  -webkit-user-select: all;
+}
+
+.api-key-box code {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+.key-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.key-confirm-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.key-confirm-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+}
